@@ -9,12 +9,13 @@ class Solution {
         // multiply of elements AFTER it excluding itself
         // then we just multuply the [i] of both arrays
 
+        // update: to reduce memory, we do it in the same array and just return it
+
         int[] before = new int[nums.length];
         before[0] = 1;
         for(int i = 1; i < nums.length ; i++) {
             before[i] = before[i-1] * nums[i-1];
         }
-        before[0] = 1;
 
         int[] after = new int[nums.length];
         // to optimise effeciency, we will start from the end 
@@ -22,15 +23,13 @@ class Solution {
         for(int i = nums.length-2 ; i>= 0; i--) {
             after[i] = after[i+1] * nums[i+1];
         }
-        after[nums.length-1] = 1;
 
-        int[] product = new int[nums.length];
-        // now we will calculate product using before[i] * after[i]
-        for(int i = 0; i< product.length; i++) {
-            product[i] = before[i] * after[i];
+        // now we will calculate product using before[i] * after[i] and save in before
+        for(int i = 0; i< before.length; i++) {
+            before[i] = before[i] * after[i];
         }
 
-        return product;
+        return before;
 
     }
 }

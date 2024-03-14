@@ -3,8 +3,9 @@ class Solution {
         int m_counter = 0;
         int n_counter = 0;
         int temp;
+        int n_x;
         while (m_counter < (m + n) && n_counter < n) {
-            int n_x = n_counter;
+            n_x = n_counter;
             while (n_x < n - 1 && nums2[n_x] > nums2[n_x + 1]) {
                 temp = nums2[n_x];
                 nums2[n_x] = nums2[n_x + 1];

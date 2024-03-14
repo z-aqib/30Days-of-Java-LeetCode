@@ -6,11 +6,10 @@ class Solution {
         int n_x;
         while (m_counter < (m + n) && n_counter < n) {
             n_x = n_counter;
-            while (n_x < n - 1 && nums2[n_x] > nums2[n_x + 1]) {
+            while (n_x < (n - 1) && nums2[n_x] > nums2[n_x + 1]) {
                 temp = nums2[n_x];
                 nums2[n_x] = nums2[n_x + 1];
-                nums2[n_x + 1] = temp;
-                n_x++;
+                nums2[n_x++ + 1] = temp;
             }
             if (m_counter < m) {
                 if (nums2[n_counter] < nums1[m_counter]) {

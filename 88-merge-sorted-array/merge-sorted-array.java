@@ -13,11 +13,6 @@ class Solution {
                 n_x++;
             }
             if (m_counter < m) {
-                if (n_counter < n - 1 && nums2[n_counter] > nums2[n_counter + 1]) {
-                    temp = nums2[n_counter];
-                    nums2[n_counter] = nums2[n_counter + 1];
-                    nums2[n_counter + 1] = temp;
-                }
                 if (nums2[n_counter] < nums1[m_counter]) {
                     temp = nums1[m_counter];
                     nums1[m_counter++] = nums2[n_counter];

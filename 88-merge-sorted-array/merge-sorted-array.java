@@ -1,30 +1,32 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int[] nums3 = new int[m + n];
         int m_counter = 0;
         int n_counter = 0;
-        int third_counter = 0;
-        while (m_counter < m && n_counter < n) {
-            if (nums1[m_counter] < nums2[n_counter]) {
-                nums3[third_counter++] = nums1[m_counter++];
-            } else if (nums1[m_counter] > nums2[n_counter]) {
-                nums3[third_counter++] = nums2[n_counter++];
-            } else {
-                nums3[third_counter++] = nums1[m_counter++];
-                nums3[third_counter++] = nums2[n_counter++];
+        int temp;
+        while (m_counter < (m + n) && n_counter < n) {
+            int n_x = n_counter;
+            while (n_x < n - 1 && nums2[n_x] > nums2[n_x + 1]) {
+                temp = nums2[n_x];
+                nums2[n_x] = nums2[n_x + 1];
+                nums2[n_x + 1] = temp;
+                n_x++;
             }
-        }
-
-        while (m_counter < m) {
-            nums3[third_counter++] = nums1[m_counter++];
-        }
-
-        while (n_counter < n) {
-            nums3[third_counter++] = nums2[n_counter++];
-        }
-
-        for(int i = 0; i < nums3.length; i++) {
-            nums1[i] = nums3[i];
+            if (m_counter < m) {
+                if (n_counter < n - 1 && nums2[n_counter] > nums2[n_counter + 1]) {
+                    temp = nums2[n_counter];
+                    nums2[n_counter] = nums2[n_counter + 1];
+                    nums2[n_counter + 1] = temp;
+                }
+                if (nums2[n_counter] < nums1[m_counter]) {
+                    temp = nums1[m_counter];
+                    nums1[m_counter++] = nums2[n_counter];
+                    nums2[n_counter] = temp;
+                } else {
+                    m_counter++;
+                }
+            } else {
+                nums1[m_counter++] = nums2[n_counter++];
+            }
         }
     }
 }

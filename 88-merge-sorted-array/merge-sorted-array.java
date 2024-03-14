@@ -1,5 +1,7 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+        if (n == 0)
+            return;
         int m_counter = 0;
         int n_counter = 0;
         int temp;
@@ -16,12 +18,10 @@ class Solution {
                     temp = nums1[m_counter];
                     nums1[m_counter++] = nums2[n_counter];
                     nums2[n_counter] = temp;
-                } else {
+                } else
                     m_counter++;
-                }
-            } else {
+            } else
                 nums1[m_counter++] = nums2[n_counter++];
-            }
         }
     }
 }

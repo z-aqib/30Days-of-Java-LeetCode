@@ -12,9 +12,9 @@ class Solution {
         while (left <= right) {
             int mid = (left + right) / 2;
             minimum = Math.min(minimum, nums[mid]); // find the minimum value
-            if (nums[mid] > nums[right]) {
+            if (nums[mid] > nums[right]) { // if it is greater than the right value, move left
                 left = mid + 1;
-            } else {
+            } else { // if it is greater than the left value, move right
                 right = mid - 1;
             }
         }

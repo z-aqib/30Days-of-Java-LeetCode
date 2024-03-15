@@ -7,7 +7,7 @@ class Solution {
         // computing until the first is greater than the last.
         int left = 0;
         int right = nums.length - 1;
-        int minimum = nums[0];
+        int minimum = nums[0]; 
         while (left <= right) {
             int mid = (left + right) / 2;
             minimum = Math.min(minimum, nums[mid]);

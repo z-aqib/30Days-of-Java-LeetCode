@@ -18,13 +18,11 @@ class Solution {
         long left = 1;
         long right = num;
         long mid;
-        long square;
         while (left <= right) {
             mid = ((left + right) / 2);
-            square = mid * mid;
-            if (square == num) {
+            if (mid * mid == num) {
                 return true;
-            } else if (square >= num) {
+            } else if (mid * mid >= num) {
                 right = mid - 1;
             } else {
                 left = mid + 1;

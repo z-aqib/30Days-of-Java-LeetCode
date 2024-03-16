@@ -6,7 +6,6 @@ class Solution {
          * would be 0. so we compute a new subarray after that
          * so first we find the maximum product of the subarray going forwards from
          * index 0, then we do the same thing going backwards from index nums.length-1.
-         * the maximum is taken of all
          */
         int max_product = -10; // the smallest nums[i] value is -10
         int temp_product = 1;

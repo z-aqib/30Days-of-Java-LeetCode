@@ -13,8 +13,7 @@ class Solution {
         int temp_x = x;
         int reverse_x = 0;
         while (temp_x >= 10) {
-            int last_digit = temp_x % 10;
-            reverse_x = (reverse_x * 10) + last_digit;
+            reverse_x = (reverse_x * 10) + temp_x % 10;
             temp_x = temp_x / 10;
         }
         reverse_x = (reverse_x * 10) + temp_x;

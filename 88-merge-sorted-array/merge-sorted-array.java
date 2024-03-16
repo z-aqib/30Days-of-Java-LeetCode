@@ -8,7 +8,7 @@ class Solution {
         // element and take elemnts from nums1 and nums2 (whichever is bigger)
         // respectively. if one array has been completed, copy the second array's
         // normally; to save memory, use m and n as nums1 and nums2 pointers
-        int m_pointer = m + n - 1;
+        int m_pointer = nums1.length - 1;
         while (m_pointer >= 0 && (n - 1) >= 0 && (m - 1) >= 0) {
             if (nums1[m - 1] > nums2[n - 1]) {
                 nums1[m_pointer--] = nums1[m-- - 1];

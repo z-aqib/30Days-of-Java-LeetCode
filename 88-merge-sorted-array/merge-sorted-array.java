@@ -16,7 +16,7 @@ class Solution {
                 nums1[m_pointer--] = nums2[n-- - 1];
             }
         }
-        // if any elements from n are left, copy them into nums1
+        // if any elements from n are left, copy them into nums1 (m_pointer places)
         while ((n - 1) >= 0) {
             nums1[m_pointer--] = nums2[n-- - 1];
         }

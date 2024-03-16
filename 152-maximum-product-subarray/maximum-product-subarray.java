@@ -3,7 +3,7 @@ class Solution {
         /*
          * so our approach is that we want the maximum subarray which can be of any
          * length. our subarray will stop when we encounter a 0 as the entire product
-         * would be 0. so we compute a new subarray after that.
+         * would be 0. so we compute a new subarray after that
          * so first we find the maximum product of the subarray going forwards from
          * index 0, then we do the same thing going backwards from index nums.length-1.
          */

@@ -8,10 +8,9 @@ class Solution {
          * string. then we get the next string and repeat.
          */
         String prefix = strs[0];
-        boolean matched;
         for (int i = 1; i < strs.length; i++) {
             String str_to_match = strs[i];
-            matched = true;
+            boolean matched = true;
             for (int j = 0; j < str_to_match.length() && j < prefix.length(); j++) {
                 if (str_to_match.charAt(j) != prefix.charAt(j)) {
                     prefix = prefix.substring(0, j);

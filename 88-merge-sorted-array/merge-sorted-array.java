@@ -8,7 +8,7 @@ class Solution {
          * so the approach is that we start a pointer of merged array from the last
          * element and take elemnts from nums1 and nums2 (whichever is bigger)
          * respectively. if one array has been completed, copy the second array's
-         * normally; to save memory, use m and n as nums1 and nums2 pointers
+         * normally; to save memory, use m and n as nums1 and nums2 pointers. 
          */
         int m_pointer = nums1.length - 1;
         while (m_pointer >= 0 && (n - 1) >= 0 && (m - 1) >= 0) {

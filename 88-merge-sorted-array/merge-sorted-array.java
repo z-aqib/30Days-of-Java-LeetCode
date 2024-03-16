@@ -7,7 +7,7 @@ class Solution {
         // so the approach is that we start a pointer of merged array from the last
         // element and take elemnts from nums1 and nums2 (whichever is bigger)
         // respectively. if one array has been completed, copy the second array's
-        // normally.
+        // normally
         int m_pointer = m + n - 1;
         while (m_pointer >= 0 && (n - 1) >= 0 && (m - 1) >= 0) {
             if (nums1[m - 1] > nums2[n - 1]) {

@@ -8,10 +8,10 @@ class Solution {
          * starts from 1 and j starts from i, and it computes (j-i) and i. this makes it
          * faster (0ms)
          */
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i+1; j < nums.length; j++) {
-                if (nums[j] + nums[i] == target) {
-                    return new int[] {i, j };
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = i; j < nums.length; j++) {
+                if (nums[j] + nums[j - i] == target) {
+                    return new int[] { j - i, j };
                 }
             }
         }

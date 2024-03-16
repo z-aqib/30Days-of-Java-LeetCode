@@ -8,7 +8,7 @@ class Solution {
          * index 0, then we do the same thing going backwards from index nums.length-1.
          */
         int max_product = -10; // the smallest nums[i] value is -10
-        int temp_product = 1;
+        int temp_product = 1; // if we keep it 0, all products are 0
         for (int i = 0; i < nums.length; i++) {
             temp_product = temp_product * nums[i];
             max_product = Math.max(max_product, Math.max(temp_product, nums[i]));

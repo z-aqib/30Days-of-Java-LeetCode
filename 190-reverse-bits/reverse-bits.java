@@ -7,12 +7,12 @@ public class Solution {
          * is fully shifted for each of the 32 bits.
          * how do we add the last bit? using a bit wise OR operator (|)
          */
-        int answer = 0;
+        int reversed_n = 0;
         for (int i = 0; i < 32; i++) {
-            answer <<= 1;
-            answer = answer | (n & 1);
+            reversed_n <<= 1;
+            reversed_n = reversed_n | (n & 1);
             n >>= 1;
         }
-        return answer;
+        return reversed_n;
     }
 }

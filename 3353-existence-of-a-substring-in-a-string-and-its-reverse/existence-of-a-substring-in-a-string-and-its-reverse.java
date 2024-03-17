@@ -18,27 +18,16 @@ class Solution {
         return false;
         /*
          * one approach can be that, that we compute all possible length-2-substrings of
-         * the string s and then all possible length-2-substrings of reversed string
-         * s_rev, then using two for loops, compare each substring of s and each
-         * substring of s_rev. whenver any are equal, return true.
-         * String[] pairs_of_s = new String[s.length()-1];
-         * for(int i = 0; i<pairs_of_s.length; i++){
-         * pairs_of_s[i] = s.substring(i, i+2);
-         * }
-         * // s_reversed can be computed by getting the characters of s from the end
-         * String[] pairs_of_s_r = new String[s.length()-1];
-         * for(int i = 0; i<pairs_of_s_r.length; i++){
-         * pairs_of_s_r[i] = s_reversed.substring(i, i+2);
-         * }
-         * for(int i = 0; i<pairs_of_s.length; i++) {
-         * if (pairs_of_s[i].equals(pairs_of_s_r[i]) == true) return true;
-         * for(int j = i+1; j<pairs_of_s.length; j++) {
-         * if (pairs_of_s[i].equals(pairs_of_s_r[j]) == true
-         * || pairs_of_s[j].equals(pairs_of_s_r[i]) == true
-         * || pairs_of_s[j].equals(pairs_of_s_r[j]) == true)
-         * return true;
-         * }
-         * }
+         * the string s, store them in an array of strings (possible_s) and then all
+         * possible length-2-substrings of reversed string s_rev, store them in an array
+         * of strings (possible_s_r) then using two for loops, compare each substring of
+         * s and each substring of s_rev. get each element in each array and compare
+         * using the condition:
+         * if (possible_s[i].equals(possible_s_r[j]) == true ||
+         * possible_s[j].equals(possible_s_r[i]) == true) ||
+         * possible_s[j].equals(possible_s_r[j]) == true ||
+         * possible_s[i].equals(possible_s_r[i]) == true) {return true;}
+         * if after traversal of all substrings there is none same, return false;
          */
     }
 }

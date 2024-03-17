@@ -7,6 +7,9 @@ class Solution {
          * another approach can be that we maintain a hashtable (a hashset uses lesser
          * memory) which saves a position for each unique value. if a second value
          * occurs, meaning a duplicate is found, it returns false.
+         * BUT, in the first approach, little to no memory is used while in the second
+         * approach alot of memory is used, in worst case, if all elements are unique,
+         * O(n) space complexity.
          */
         Set<Integer> hashTable = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {

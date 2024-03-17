@@ -1,13 +1,16 @@
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         /*
-         * so the approach is that we will sort the array using Arrays.sort(nums) and
-         * then compare each ith index with its i+1th index; if they have same value
-         * that means duplicates exist, else at the end of the loop, they do not exist.
+         * so a very easy approach can be that we sort the array using Arrays.sort(nums)
+         * and then compare each neighbouring element with each other for duplicates.
+         * BUT in sorting it has time complexity O(n^2) making it very slower.
+         * another approach can be that we maintain a hashtable (a hashset uses lesser
+         * memory) which saves a position for each unique value. if a second value
+         * occurs, meaning a duplicate is found, it returns false.
          */
-        Arrays.sort(nums);
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] == nums[i + 1])
+        Set<Integer> hashTable = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (hashTable.add(nums[i]) == false)
                 return true;
         }
         return false;

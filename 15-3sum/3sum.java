@@ -28,11 +28,7 @@ class Solution {
             while (first_pointer < second_pointer) {
                 int sum = nums[i] + nums[first_pointer] + nums[second_pointer];
                 if (sum == 0) {
-                    List<Integer> triplet = new ArrayList<Integer>();
-                    triplet.add(nums[i]);
-                    triplet.add(nums[first_pointer]);
-                    triplet.add(nums[second_pointer]);
-                    list.add(triplet);
+                    list.add(Arrays.asList(nums[i], nums[first_pointer], nums[second_pointer]));
                     // now skip all the duplicates of first_pointer
                     while (first_pointer < second_pointer
                             && nums[first_pointer] == nums[first_pointer + 1]) {

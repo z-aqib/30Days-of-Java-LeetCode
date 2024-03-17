@@ -26,7 +26,8 @@ class Solution {
             int first_pointer = i + 1;
             int second_pointer = nums.length - 1;
             while (first_pointer < second_pointer) {
-                if (nums[i]+ nums[first_pointer] + nums[second_pointer] == 0) {
+                int sum = nums[i] + nums[first_pointer] + nums[second_pointer];
+                if (sum == 0) {
                     List<Integer> triplet = new ArrayList<Integer>();
                     triplet.add(nums[i]);
                     triplet.add(nums[first_pointer]);
@@ -46,7 +47,7 @@ class Solution {
                     }
                     // now move one value ahead
                     second_pointer--;
-                } else if (nums[i]+ nums[first_pointer] + nums[second_pointer] > 0) {
+                } else if (sum > 0) {
                     // sum is too high, decrease the maximum value to get closer to zero
                     second_pointer--;
                 } else {

@@ -8,11 +8,11 @@ class Solution {
          */
         s = s.trim();
         int i = s.length() - 1;
-        for ( ; i >= 0; i--) {
+        for (; i >= 0; i--) {
             if (Character.isLetter(s.charAt(i)) == false) {
                 break;
             }
         }
-        return s.length() - i - 1;
+        return (s.length() - 1) - i;
     }
 }

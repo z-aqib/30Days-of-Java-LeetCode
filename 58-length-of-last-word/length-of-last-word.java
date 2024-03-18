@@ -7,14 +7,12 @@ class Solution {
          * all spaces using s.trim() built in function.
          */
         s = s.trim();
-        int word_length = 0;
-        for (int i = s.length() - 1; i >= 0; i--) {
-            if (Character.isLetter(s.charAt(i)) == true) {
-                word_length++;
-            } else {
+        int i = s.length() - 1;
+        for ( ; i >= 0; i--) {
+            if (Character.isLetter(s.charAt(i)) == false) {
                 break;
             }
         }
-        return word_length;
+        return s.length() - i - 1;
     }
 }

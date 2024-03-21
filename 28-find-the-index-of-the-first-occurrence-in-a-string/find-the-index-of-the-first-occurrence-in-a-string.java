@@ -7,10 +7,10 @@ class Solution {
          * checking for the first (zeroth) index hence it always gives first occurence
          * of needle. if no index is found, return -1
          */
-        for (int i = 0; i + needle.length() <= haystack.length(); i++) {
+        for (int i = 0; i + needle.length() <= haystack.length(); i++) 
             if (haystack.substring(i, i + needle.length()).equals(needle) == true)
                 return i;
-        }
-        return -1;
+        
+        return -1; // if no index returned till yet, return -1 (needle not found)
     }
 }

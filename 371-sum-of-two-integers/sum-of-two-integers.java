@@ -3,9 +3,11 @@ class Solution {
         /*
          * so in this approach we calculate the sum and carry of a and b and then re
          * calculate it iteratively on the new values of a and b (a is sum and b is
-         * carry) and then continue calculating until b (carry) is 0.
+         * carry) and then continue calculating until b (carry) is 0. then we return a
+         * (the sum)
          * we calculate sum using XOR gate on a, b (a ^ b)
-         * we calculate carry using (a AND b) and then we shift left this value by 1 digit
+         * we calculate carry using (a AND b) and then we shift left this value by 1
+         * digit
          */
         int sum;
         int carry;

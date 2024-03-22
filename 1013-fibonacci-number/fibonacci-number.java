@@ -11,7 +11,6 @@ class Solution {
         int[] array = new int[n+1];
         return fibonacci(n, array);
     }
-
     public int fibonacci(int n, int[] array) {
         if (n == 0)
             return 0;

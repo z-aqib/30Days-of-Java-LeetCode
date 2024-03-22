@@ -3,7 +3,7 @@ class Solution {
         /*
          * one approach can be to make a recursive function where it returns fib(n-1) +
          * fib(n-2) as fib(n) is the sum of its previous two numbers. but this can be
-         * slow as it recomputes each fib below each n multiple times repeatedly. to fix
+         * slow as it recomputes each fib below n multiple times repeatedly. to fix
          * this, we introduce an array which saves each fib(n) so it is calculated only
          * once. when fib(n) is re-called multiple times, it will just retreive the
          * calculated value from the array.

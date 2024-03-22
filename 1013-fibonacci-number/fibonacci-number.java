@@ -6,7 +6,7 @@ class Solution {
          * slow as it recomputes each fib below n multiple times repeatedly. to fix
          * this, we introduce an array which saves each fib(n) so it is calculated only
          * once. when fib(n) is re-called multiple times, it will just retreive the
-         * calculated value from the array.
+         * calculated value from the array. this results in 0ms. 
          */
         int[] array = new int[n+1];
         return fibonacci(n, array);

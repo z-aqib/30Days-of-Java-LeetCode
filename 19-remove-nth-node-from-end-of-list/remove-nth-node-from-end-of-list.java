@@ -10,7 +10,6 @@
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        System.out.println("given n -> " + n);
         ListNode duplicateHead = head;
         int counter = 0;
         while (duplicateHead != null) {
@@ -18,7 +17,6 @@ class Solution {
             duplicateHead = duplicateHead.next;
         }
         n = counter - n;
-        System.out.println("removing n -> " + n);
         int pointer = 0;
         if (n == 0)
             return head.next;
@@ -28,12 +26,9 @@ class Solution {
         } else {
             duplicateHead = head;
             while ((pointer++ ) != (n-1) && duplicateHead.next.next != null) {
-                System.out.println("duplicateHead.val -> " + duplicateHead.val);
                 duplicateHead = duplicateHead.next;
-                System.out.println("pointer -> " + pointer);
             }
             // remove this element
-            System.out.println("removed -> " + duplicateHead.next.val);
             duplicateHead.next = duplicateHead.next.next;
             return head;
         }

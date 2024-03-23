@@ -20,10 +20,7 @@ class Solution {
         pointer = 0;
         if (n == 0)
             return head.next;
-        else if (n == 1) {
-            head.next = head.next.next;
-            return head;
-        } else {
+        else {
             duplicateHead = head;
             while ((pointer++ ) != (n-1) && duplicateHead.next.next != null) {
                 duplicateHead = duplicateHead.next;

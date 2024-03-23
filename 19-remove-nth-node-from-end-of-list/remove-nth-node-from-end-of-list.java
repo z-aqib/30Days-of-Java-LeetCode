@@ -22,7 +22,7 @@ class Solution {
             return head.next;
         else {
             duplicateHead = head;
-            while ((pointer++ ) != (n-1) && duplicateHead.next.next != null) {
+            while ((pointer++ ) != (n-1)) {
                 duplicateHead = duplicateHead.next;
             }
             // remove this element

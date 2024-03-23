@@ -11,13 +11,13 @@
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode duplicateHead = head;
-        int counter = 0;
+        int pointer = 0;
         while (duplicateHead != null) {
-            counter++;
+            pointer++;
             duplicateHead = duplicateHead.next;
         }
-        n = counter - n;
-        int pointer = 0;
+        n = pointer - n;
+        pointer = 0;
         if (n == 0)
             return head.next;
         else if (n == 1) {

@@ -24,7 +24,7 @@ class Solution {
          * than side, move main one ahead. if either the main ends or the side ends,
          * repeat. now if the main has ended but side is still left, add all of sides to
          * main. but if the side has ended and main is left, then they are already in
-         * the main so no change. return the main.
+         * the main so no change. return the main list.
          */
         // so if either one of them are null, return the other
         if (list1 == null)

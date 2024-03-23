@@ -35,7 +35,6 @@ class Solution {
             duplicateHead = head;
             while (pointer++ != n - 1)
                 duplicateHead = duplicateHead.next;
-            // remove this element
             duplicateHead.next = duplicateHead.next.next;
             return head;
         }

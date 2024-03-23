@@ -27,8 +27,8 @@ public class Solution {
         while (fast_runner != null && fast_runner.next != null) {
             if (fast_runner == slow_runner)
                 return true;
-            fast_runner = fast_runner.next.next;
-            slow_runner = slow_runner.next;
+            fast_runner = fast_runner.next.next; // move two forward
+            slow_runner = slow_runner.next; // move one forward
         }
         return false;
         /*

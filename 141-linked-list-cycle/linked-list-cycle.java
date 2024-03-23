@@ -20,10 +20,11 @@ public class Solution {
          * reached the end of the linked list without re-meeting slow_runner, hence
          * return false.
          */
-         if (head == null) return false;
+        if (head == null)
+            return false;
         ListNode fast_runner = head.next;
         ListNode slow_runner = head;
-        while (fast_runner!=null &&fast_runner.next != null) {
+        while (fast_runner != null && fast_runner.next != null) {
             if (fast_runner == slow_runner)
                 return true;
             fast_runner = fast_runner.next.next;

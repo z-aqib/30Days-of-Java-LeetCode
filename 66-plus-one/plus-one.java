@@ -11,7 +11,7 @@ class Solution {
             }
             return digits;
         }
-        if (n == 0) {
+        if (n <= 0) {
             int[] d = new int[digits.length + 1];
             d[0] = 1;
             System.out.println("done");
